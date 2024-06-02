@@ -1645,6 +1645,9 @@ class GradientBoostingClassifier(ClassifierMixin, BaseGradientBoosting):
     def predict_proba(self, X):
         """Predict class probabilities for X.
 
+        The predicted class probabilities of an input sample are computed as the mean
+        predicted class probabilities of the trees in the forest.
+
         Parameters
         ----------
         X : {array-like, sparse matrix} of shape (n_samples, n_features)
